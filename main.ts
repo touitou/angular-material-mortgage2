@@ -1,10 +1,10 @@
-import './polyfills';
+import "./polyfills";
 
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
-import {HttpClientModule} from '@angular/common/http';
-import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CdkTableModule } from "@angular/cdk/table";
+import { CdkTreeModule } from "@angular/cdk/tree";
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -40,12 +40,13 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatTreeModule,
-} from '@angular/material';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {AppComponent} from './app/app.component';
+  MatTreeModule
+} from "@angular/material";
+import { BrowserModule } from "@angular/platform-browser";
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { AppComponent } from "./app/app.component";
+import { PaymentFormComponent } from "./app/paymentform/paymentform.component";
 
 @NgModule({
   exports: [
@@ -85,7 +86,7 @@ import {AppComponent} from './app/app.component';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule,
+    MatTreeModule
   ]
 })
 export class DemoMaterialModule {}
@@ -98,17 +99,16 @@ export class DemoMaterialModule {}
     HttpClientModule,
     DemoMaterialModule,
     MatNativeDateModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   entryComponents: [AppComponent],
-  declarations: [AppComponent],
+  declarations: [AppComponent, PaymentFormComponent],
   bootstrap: [AppComponent],
   providers: []
 })
 export class AppModule {}
 
 platformBrowserDynamic().bootstrapModule(AppModule);
-
 
 /**  Copyright 2018 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
